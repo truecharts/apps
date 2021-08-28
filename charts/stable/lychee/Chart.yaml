@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Lychee is a free photo-management tool, which runs on your server or
   web-space
@@ -23,4 +23,4 @@ sources:
 - https://github.com/LycheeOrg/Lychee
 - https://hub.docker.com/r/lycheeorg/lychee
 type: application
-version: 6.8.2
+version: 6.8.3

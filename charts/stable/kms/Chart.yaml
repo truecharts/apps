@@ -3,7 +3,7 @@ appVersion: minimal
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Private Windows Activation Server for development and testing
 home: https://github.com/truecharts/apps/tree/master/charts/stable/kms
@@ -22,4 +22,4 @@ name: kms
 sources:
 - https://github.com/SystemRage/py-kms
 type: application
-version: 6.8.2
+version: 6.8.3

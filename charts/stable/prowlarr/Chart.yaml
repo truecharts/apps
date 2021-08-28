@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 description: Indexer manager/proxy built on the popular arr net base stack to integrate
   with your various PVR apps.
 home: https://github.com/truecharts/apps/tree/master/charts/incubator/prowlarr
@@ -21,4 +21,4 @@ name: prowlarr
 sources:
 - https://github.com/Prowlarr/Prowlarr
 - https://github.com/k8s-at-home/container-images
-version: 1.8.2
+version: 1.8.3

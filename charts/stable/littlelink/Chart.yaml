@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Easy platform to combine all your social links
 home: https://github.com/truecharts/apps/tree/master/charts/stable/littlelink
@@ -23,4 +23,4 @@ sources:
 - https://github.com/techno-tim/littlelink-server
 - https://github.com/sethcottle/littlelink
 type: application
-version: 1.2.2
+version: 1.2.3

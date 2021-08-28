@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Navidrome is an open source web-based music collection server and streamer
 home: https://github.com/truecharts/apps/tree/master/charts/incubator/navidrome
@@ -22,4 +22,4 @@ sources:
 - https://github.com/deluan/navidrome
 - https://hub.docker.com/r/deluan/navidrome
 type: application
-version: 6.8.2
+version: 6.8.3

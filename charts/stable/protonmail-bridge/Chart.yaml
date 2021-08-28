@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Container for protonmail bridge to work on the network.
 home: https://github.com/truechartsapps/tree/master/charts/incubator/protonmail-bridge
 icon: https://raw.githubusercontent.com/ProtonMail/proton-bridge/master/icon.iconset/icon_256x256.png
@@ -19,4 +19,4 @@ name: protonmail-bridge
 sources:
 - https://github.com/shenxn/protonmail-bridge-docker
 - https://hub.docker.com/r/shenxn/protonmail-bridge
-version: 1.6.2
+version: 1.6.3

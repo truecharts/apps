@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Overseerr is a free and open source software application for managing
   requests for your media library. It integrates with your existing services such
   as Sonarr, Radarr and Plex!
@@ -23,4 +23,4 @@ name: overseerr
 sources:
 - https://github.com/sct/overseerr
 - https://hub.docker.com/r/sctx/overseerr
-version: 1.6.2
+version: 1.6.3

@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: This application runs as a daemon on your download host. It checks for
   completed downloads and extracts them so Radarr, Lidarr, Sonarr, and Readarr may
@@ -26,4 +26,4 @@ sources:
 - https://github.com/davidnewhall/unpackerr
 - https://hub.docker.com/r/golift/unpackerr
 type: application
-version: 1.8.2
+version: 1.8.3

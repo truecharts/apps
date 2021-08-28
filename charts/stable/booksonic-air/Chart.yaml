@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Booksonic is a platform for accessing the audibooks you own wherever
   you are
 home: https://github.com/truechartsapps/tree/master/charts/incubator/booksonic-air
@@ -20,4 +20,4 @@ name: booksonic-air
 sources:
 - https://github.com/popeen/Booksonic-Air
 - https://hub.docker.com/r/linuxserver/booksonic-air
-version: 1.6.2
+version: 1.6.3

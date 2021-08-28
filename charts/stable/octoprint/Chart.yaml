@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: OctoPrint is the snappy web interface for your 3D printer
 home: https://github.com/truechartsapps/tree/master/charts/incubator/octoprint
 icon: https://avatars3.githubusercontent.com/u/5982294?s=400&v=4
@@ -20,4 +20,4 @@ name: octoprint
 sources:
 - https://github.com/OctoPrint/OctoPrint
 - https://hub.docker.com/r/octoprint/octoprint
-version: 1.6.2
+version: 1.6.3

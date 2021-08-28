@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: pyLoad is a Free and Open Source download manager written in Python and
   designed to be extremely lightweight, easily extensible and fully manageable via
   web.
@@ -21,4 +21,4 @@ name: pyload
 sources:
 - https://github.com/pyload/pyload
 - https://hub.docker.com/r/linuxserver/pyload
-version: 1.6.2
+version: 1.6.3

@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: DeepStack AI provides AI features including Face Recognition, Object
   Detection, Scene Recognition and custom AI Models
@@ -25,4 +25,4 @@ sources:
 - https://hub.docker.com/r/deepquestai/deepstack
 - https://www.deepstack.cc/
 type: application
-version: 4.8.2
+version: 4.8.3

@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Librespeed is a HTML5 webpage to test upload and download speeds
 home: https://github.com/truechartsapps/tree/master/charts/incubator/librespeed
 icon: https://github.com/librespeed/speedtest/blob/master/.logo/icon_huge.png?raw=true
@@ -20,4 +20,4 @@ sources:
 - https://github.com/librespeed/speedtest
 - https://hub.docker.com/r/linuxserver/librespeed
 - https://github.com/truechartsapps/tree/master/charts/librespeed
-version: 1.6.2
+version: 1.6.3

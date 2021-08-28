@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: A simple null file http and https server
 home: https://github.com/truechartsapps/tree/master/charts/incubator/nullserv
 icon: https://miro.medium.com/max/800/1*UL9RWkTUtJlyHW7kGm20hQ.png
@@ -17,4 +17,4 @@ maintainers:
 name: nullserv
 sources:
 - https://github.com/bmrzycki/nullserv
-version: 1.6.2
+version: 1.6.3

@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Emby Server is a home media server
 home: https://github.com/truecharts/apps/master/stable/emby
@@ -25,4 +25,4 @@ sources:
 - https://hub.docker.com/r/linuxserver/emby
 - https://github.com/linuxserver/docker-emby.git
 type: application
-version: 6.8.2
+version: 6.8.3

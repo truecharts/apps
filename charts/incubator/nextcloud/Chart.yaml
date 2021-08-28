@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 - condition: postgresql.enabled
   name: postgresql
   repository: https://truecharts.org/
@@ -33,4 +33,4 @@ sources:
 - https://github.com/nextcloud/docker
 - https://github.com/nextcloud/helm
 type: application
-version: 2.3.2
+version: 2.3.3

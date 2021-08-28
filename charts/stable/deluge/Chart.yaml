@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Deluge App for TrueNAS SCALE
 home: https://github.com/truecharts/apps/tree/master/charts/incubator/deluge
@@ -21,4 +21,4 @@ name: deluge
 sources:
 - https://github.com/deluge-torrent/deluge
 type: application
-version: 6.8.2
+version: 6.8.3

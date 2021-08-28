@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 - condition: postgresql.enabled
   name: postgresql
   repository: https://truecharts.org/
@@ -27,4 +27,4 @@ name: fireflyiii
 sources:
 - https://github.com/firefly-iii/firefly-iii/
 type: application
-version: 5.3.2
+version: 5.3.3

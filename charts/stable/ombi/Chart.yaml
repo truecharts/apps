@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Want a Movie or TV Show on Plex or Emby? Use Ombi!
 home: https://github.com/truecharts/apps/tree/master/charts/stable/ombi
@@ -27,4 +27,4 @@ name: ombi
 sources:
 - https://github.com/tidusjar/Ombi
 type: application
-version: 6.8.2
+version: 6.8.3

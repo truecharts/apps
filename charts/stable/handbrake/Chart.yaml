@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: HandBrake is a tool for converting video from nearly any format to a
   selection of modern, widely supported codecs.
@@ -27,4 +27,4 @@ sources:
 - https://hub.docker.com/r/jlesage/handbrake/
 - https://handbrake.fr/
 type: application
-version: 6.8.2
+version: 6.8.3

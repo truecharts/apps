@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 description: The Lounge, modern web IRC client designed for self-hosting
 home: https://github.com/truecharts/apps/tree/master/charts/incubator/thelounge
 icon: https://avatars.githubusercontent.com/u/14336958?s=200&v=4
@@ -21,4 +21,4 @@ maintainers:
 name: thelounge
 sources:
 - https://github.com/thelounge/thelounge
-version: 1.8.2
+version: 1.8.3

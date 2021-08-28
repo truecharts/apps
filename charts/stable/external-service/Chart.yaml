@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Allow external services to be used like Apps.
 home: https://github.com/truecharts/apps/tree/master/charts/stable/external-service
@@ -23,4 +23,4 @@ name: external-service
 sources:
 - https://github.com/truecharts/apps/tree/master/charts/stable/external-service
 type: application
-version: 1.1.3
+version: 1.1.4

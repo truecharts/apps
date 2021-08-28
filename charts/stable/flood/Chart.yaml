@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Flood is a monitoring service for various torrent clients
 home: https://github.com/truechartsapps/tree/master/charts/incubator/flood
 icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
@@ -21,4 +21,4 @@ name: flood
 sources:
 - https://github.com/jesec/flood
 - https://hub.docker.com/r/jesec/flood
-version: 1.6.2
+version: 1.6.3

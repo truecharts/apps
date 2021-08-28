@@ -3,7 +3,7 @@ appVersion: v4.0.8
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: AppDaemon is a loosely coupled, multithreaded, sandboxed python execution
   environment for writing automation apps for Home Assistant home automation software.
@@ -26,4 +26,4 @@ name: appdaemon
 sources:
 - https://github.com/AppDaemon/appdaemon
 type: application
-version: 3.8.2
+version: 3.8.3

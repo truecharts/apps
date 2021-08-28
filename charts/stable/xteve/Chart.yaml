@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: M3U Proxy for Plex DVR and Emby Live TV.
 home: https://github.com/truechartsapps/tree/master/charts/incubator/xteve
 icon: https://raw.githubusercontent.com/xteve-project/xTeVe/master/html/img/logo_b_880x200.jpg
@@ -21,4 +21,4 @@ name: xteve
 sources:
 - https://github.com/xteve-project/xTeVe
 - https://github.com/k8s-at-home/container-images
-version: 1.6.2
+version: 1.6.3

@@ -3,7 +3,7 @@ appVersion: latest
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: HTPC/Homelab Services Organizer
 home: https://github.com/truecharts/apps/tree/master/charts/incubator/organizr
@@ -20,4 +20,4 @@ sources:
 - https://github.com/causefx/Organizr
 - https://hub.docker.com/r/organizr/organizr
 type: application
-version: 6.8.2
+version: 6.8.3

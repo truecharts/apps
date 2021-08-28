@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: "A fork of Sonarr to work with movies \xE0 la Couchpotato"
 home: https://github.com/truecharts/apps/tree/master/charts/stable/radarr
@@ -24,4 +24,4 @@ name: radarr
 sources:
 - https://github.com/Radarr/Radarr
 type: application
-version: 6.8.2
+version: 6.8.3

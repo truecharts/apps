@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: A Python based monitoring and tracking tool for Plex Media Server
 home: https://github.com/truecharts/apps/tree/master/charts/stable/tautulli
@@ -23,4 +23,4 @@ name: tautulli
 sources:
 - https://github.com/Tautulli/Tautulli
 type: application
-version: 6.8.2
+version: 6.8.3

@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Web-based LDAP browser to manage your LDAP server
 home: https://github.com/truecharts/apps/tree/master/charts/stable/phpldapadmin
@@ -24,4 +24,4 @@ name: phpldapadmin
 sources:
 - https://gitlab.v2.rancher.geohub.space/g3s/i3s/i3s-helm-catalog
 type: application
-version: 1.5.2
+version: 1.5.3

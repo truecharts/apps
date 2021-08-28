@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Create live TV channel streams from media on your Plex servers.
 home: https://github.com/truechartsapps/tree/master/charts/incubator/dizquetv
 icon: https://github.com/vexorian/dizquetv/raw/main/resources/dizquetv.png?raw=true
@@ -19,4 +19,4 @@ name: dizquetv
 sources:
 - https://github.com/vexorian/dizquetv
 - https://hub.docker.com/r/vexorian/dizquetv
-version: 1.6.2
+version: 1.6.3

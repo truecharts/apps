@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Web-Based postgresql database management utility
 home: https://github.com/truecharts/apps/tree/master/charts/stable/pgadmin
@@ -24,4 +24,4 @@ name: pgadmin
 sources:
 - https://www.pgadmin.org/
 type: application
-version: 1.5.2
+version: 1.5.3

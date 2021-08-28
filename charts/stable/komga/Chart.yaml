@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: A comics/mangas server to serve/stream pages via API
 home: https://github.com/truechartsapps/tree/master/charts/incubator/komga
 icon: https://komga.org/assets/media/logo.svg
@@ -21,4 +21,4 @@ name: komga
 sources:
 - https://komga.org/
 - https://github.com/gotson/komga
-version: 1.6.2
+version: 1.6.3

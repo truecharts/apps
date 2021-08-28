@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: pretend-youre-xyzzy, a cards against humanity clone
 home: https://github.com/truechartsapps/tree/master/charts/incubator/pretend-youre-xyzzy
 icon: https://apk-google.com/wp-content/uploads/2020/12/Client-for-Pretend-Youre-Xyzzy-open-source-5.0.1.png
@@ -21,4 +21,4 @@ name: pretend-youre-xyzzy
 sources:
 - https://github.com/ajanata/PretendYoureXyzzy
 - https://github.com/emcniece/DockerYourXyzzy
-version: 1.6.2
+version: 1.6.3

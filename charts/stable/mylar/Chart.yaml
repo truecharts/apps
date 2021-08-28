@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Mylar is the automated Comic Book downloader (cbr/cbz) for use with various
   download clients.
 home: https://github.com/truechartsapps/tree/master/charts/incubator/mylar
@@ -19,4 +19,4 @@ sources:
 - https://github.com/mylar3/mylar3
 - https://github.com/linuxserver/docker-mylar3
 - https://github.com/truechartsapps/tree/master/charts/mylar
-version: 1.6.2
+version: 1.6.3

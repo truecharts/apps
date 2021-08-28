@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Bazarr is a companion application to Bazarr and Radarr. It manages and
   downloads subtitles based on your requirements
@@ -29,4 +29,4 @@ sources:
 - https://github.com/Bazarr/Bazarr
 - https://hub.docker.com/r/linuxserver/bazarr
 type: application
-version: 6.8.2
+version: 6.8.3

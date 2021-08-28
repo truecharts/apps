@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org/
-  version: 6.10.6
+  version: 6.10.7
 deprecated: false
 description: Community developed LDAP software
 home: https://www.openldap.org
@@ -26,4 +26,4 @@ sources:
 - https://github.com/jp-gouin/helm-openldap
 - https://github.com/osixia/docker-openldap
 type: application
-version: 1.4.2
+version: 1.4.3

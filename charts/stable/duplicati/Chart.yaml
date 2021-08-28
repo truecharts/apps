@@ -3,7 +3,7 @@ appVersion: auto
 dependencies:
 - name: common
   repository: https://truecharts.org
-  version: 6.10.6
+  version: 6.10.7
 description: Store securely encrypted backups on cloud storage services!
 home: https://github.com/truechartsapps/tree/master/charts/incubator/duplicati
 icon: https://avatars.githubusercontent.com/u/8270231?s=200&v=4
@@ -18,4 +18,4 @@ name: duplicati
 sources:
 - https://hub.docker.com/r/linuxserver/duplicati/
 - https://github.com/duplicati/duplicati
-version: 1.6.2
+version: 1.6.3
