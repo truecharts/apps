@@ -17,6 +17,9 @@ probes:
 imageSelector: "netshootImage"
 resources:
   excludeExtra: true
+  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $rootCtx "objectData" .Values.addons.netshoot.resources ) | trim) }}
+    {{- . | nindent 2 }}
+  {{- end }}
 securityContext:
   runAsUser: 0
   runAsGroup: 0
