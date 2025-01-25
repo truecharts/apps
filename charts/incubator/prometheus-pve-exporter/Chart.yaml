@@ -6,10 +6,10 @@ annotations:
   truecharts.org/min_helm_version: "3.11"
   truecharts.org/train: incubator
 apiVersion: v2
-appVersion: 3.4.7
+appVersion: 3.5.0
 dependencies:
   - name: common
-    version: 25.2.4
+    version: 25.2.6
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,9 +31,9 @@ maintainers:
     url: https://truecharts.org
 name: prometheus-pve-exporter
 sources:
-  - https://github.com/truecharts/charts/tree/master/charts/incubator/prometheus-pve-exporter
   - https://github.com/prometheus-pve/prometheus-pve-exporter
-  - https://hub.docker.com/r/prompve/prometheus-pve-exporter
+  - https://github.com/truecharts/charts/tree/master/charts/incubator/prometheus-pve-exporter
   - https://grafana.com/grafana/dashboards/10347-proxmox-via-prometheus/
+  - https://hub.docker.com/r/prompve/prometheus-pve-exporter
 type: application
-version: 0.1.0
+version: 0.1.1

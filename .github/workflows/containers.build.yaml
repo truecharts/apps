@@ -32,7 +32,7 @@ jobs:
       containers_found: ${{ steps.reduce.outputs.containers_found }} # New output
     steps:
       - name: Checkout
-        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - uses: dorny/paths-filter@de90cc6fb38fc0963ad72b210f1f284cd68cea36 # v3
         id: filter
         with:
@@ -66,7 +66,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       #- name: hadolint
       #  uses: reviewdog/action-hadolint@73fec8b28091e5082c19df69815dd749d97b882a # v1.46.0
       #  with:
@@ -102,7 +102,7 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout
-        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       # Define if tests and push should be run against which versions/platforms
       - name: Prepare
@@ -211,7 +211,7 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5
+        uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 # v5
         with:
           # list of Docker images to use as base name for tags
           images: |
@@ -237,7 +237,7 @@ jobs:
       # Creates a local build to run tests on
       - name: Build and Load local test-container
         if: ${{ steps.prep.outputs.goss == 'true' }}
-        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6
+        uses: docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991 # v6
         with:
           build-args: |
             VERSION=${{ steps.prep.outputs.version }}
@@ -265,7 +265,7 @@ jobs:
       # Push if not a PR, otherwise just test the build process for all requested platforms
       - name: Build and Push
         id: push
-        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6
+        uses: docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991 # v6
         with:
           build-args: |
             VERSION=${{ steps.prep.outputs.version }}

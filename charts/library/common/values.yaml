@@ -494,7 +494,7 @@ codeserverImage:
 
 alpineImage:
   repository: tccr.io/tccr/alpine
-  tag: v3.20.3@sha256:1e8d4e2c057280ff8e4139757ff2a5d77a0f7271a3be3b8244a19a2697840e01
+  tag: v3.21.0@sha256:ec64547ad03f8d44c8d361fb3542df8cfe1012d8d79fe13fbb7ba977f07f6d7c
   pullPolicy: IfNotPresent
 
 scratchImage:
@@ -515,7 +515,7 @@ wgetImage:
 yqImage:
   pullPolicy: IfNotPresent
   repository: docker.io/mikefarah/yq
-  tag: 4.44.6@sha256:b1d117c609ba990436ad1649299e2f6c378f62cb562caf30b6f2fb6144713422
+  tag: 4.45.1@sha256:2c100efaca06e95ffe452cfe9bfc0048b493f0f3a072d5fe06f828c638d9462b
 
 postgresClientImage:
   repository: tccr.io/tccr/db-wait-postgres

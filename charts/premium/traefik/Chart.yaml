@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 3.3.2
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.3.1
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -35,4 +35,4 @@ sources:
   - https://github.com/truecharts/containers/tree/master/apps/traefik
   - https://traefik.io/
 type: application
-version: 30.4.0
+version: 30.4.1

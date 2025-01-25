@@ -20,7 +20,7 @@ jobs:
       image: ghcr.io/truecharts/devcontainer:3.1.10@sha256:c239addf725eb5cedf79517f8089fdafdc32b5270d1893ee87ae6e511b9bcae3
     steps:
       - name: Checkout
-        uses: actions/checkout@eef61447b9ff4aafe5dcd4e0bbf5d482be7e7871 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           token: ${{ secrets.OR_PAT }}
           fetch-depth: 1
