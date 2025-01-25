@@ -6,7 +6,7 @@
 {{- define "tc.v1.common.spawner.traefik.middleware" -}}
   {{- $fullname := include "tc.v1.common.lib.chart.names.fullname" $ -}}
 
-  {{- range $name, $middleware := .Values.middlewares -}}
+  {{- range $name, $middleware := .Values.ingressMiddlewares -}}
 
     {{- $enabled := (include "tc.v1.common.lib.util.enabled" (dict
                     "rootCtx" $ "objectData" $middleware

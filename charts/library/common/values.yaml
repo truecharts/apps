@@ -235,19 +235,94 @@ credentials:
   #   ## Is used in cases where things are encrypted by a backup utility
   #   encrKey: ""
 
-middlewares: {}
-#   basic-auth:
-#     type: basicAuth
-#     data:
-#       # middleware specific data ie
-#       users:
-#         - username: user1
-#           password: password1
-#   some-other-middleware:
-#     type: someOtherMiddleware
-#     data:
-#       # middleware specific data ie
-#       someOtherMiddlewareData: someOtherMiddlewareData
+ingressDefaultMiddlewares:
+  traefik:
+    tc-basic-ratelimit:
+      type: ratelimit
+      data:
+        average: 600
+      burst: 400
+    tc-compress:
+      type: compress
+    tc-basic-secure-headers:
+      type: headers
+      data:
+        accessControlAllowMethods:
+          - GET
+          - OPTIONS
+          - HEAD
+          - PUT
+        accessControlMaxAge: 100
+        stsSeconds: 63072000
+        # stsIncludeSubdomains: false
+        # stsPreload: false
+        forceSTSHeader: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        referrerPolicy: same-origin
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+        customResponseHeaders:
+          server: ''
+    tc-closedcors-headers:
+      type: headers
+      data:
+        accessControlAllowHeaders:
+        - '*'
+        accessControlAllowMethods:
+        - GET
+        - OPTIONS
+        - HEAD
+        - PUT
+        - POST
+        accessControlAllowOriginList:
+        - '*'
+        accessControlMaxAge: 100
+        browserXssFilter: true
+        contentTypeNosniff: true
+        frameDeny: true
+        customRequestHeaders:
+          X-Forwarded-Proto: https
+        customResponseHeaders:
+          server: ""
+        forceSTSHeader: true
+        referrerPolicy: same-origin
+        stsSeconds: 63072000
+    tc-opencors-headers:
+      type: headers
+      data:
+        accessControlAllowMethods:
+          - GET
+          - OPTIONS
+          - HEAD
+          - PUT
+        accessControlMaxAge: 100
+        stsSeconds: 63072000
+        # stsIncludeSubdomains: false
+        # stsPreload: false
+        forceSTSHeader: true
+        contentTypeNosniff: true
+        browserXssFilter: true
+        referrerPolicy: same-origin
+        contentSecurityPolicy: frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests​
+        customRequestHeaders:
+          X-Forwarded-Proto: "https"
+        customResponseHeaders:
+          server: ''
+ingressMiddlewares: {}
+#  traefik:
+#    basic-auth:
+#      type: basicAuth
+#      data:
+#        # middleware specific data ie
+#        users:
+#          - username: user1
+#            password: password1
+#    some-other-middleware:
+#      type: someOtherMiddleware
+#      data:
+#        # middleware specific data ie
+#        someOtherMiddlewareData: someOtherMiddlewareData
 
 # -- (docs/persistence/README.md)
 persistence:
