@@ -1,35 +1,8 @@
 {{/*
 The gluetun sidecar container to be inserted.
 */}}
-{{- define "tc.v1.common.addon.vpn.openvpn.container" -}}
-enabled: true
-imageSelector: openvpnImage
-probes:
-{{- if $.Values.addons.vpn.livenessProbe }}
-  liveness:
-  {{- toYaml . | nindent 2 }}
-{{- else }}
-  liveness:
-    enabled: false
-{{- end }}
-  readiness:
-    enabled: false
-  startup:
-    enabled: false
-resources:
-  excludeExtra: true
-  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $ "objectData" .Values.addons.vpn.resources ) | trim) }}
-    {{- . | nindent 2 }}
-  {{- end }}
-securityContext:
-  runAsUser: 0
-  runAsGroup: 0
-  capabilities:
-    add:
-      - NET_ADMIN
-      - NET_RAW
-      - MKNOD
-      - SYS_MODULE
+{{- define "tc.v1.common.addon.vpn.openvpn.containerModify" -}}
+
 
 env:
 {{- with $.Values.addons.vpn.env }}
@@ -63,16 +36,4 @@ env:
 {{- end }}
 {{- end -}}
 
-{{- range $envList := $.Values.addons.vpn.envList -}}
-  {{- if and $envList.name $envList.value }}
-  {{ $envList.name }}: {{ $envList.value | quote }}
-  {{- else -}}
-    {{- fail "Please specify name/value for VPN environment variable" -}}
-  {{- end -}}
-{{- end -}}
-
-{{- with $.Values.addons.vpn.args }}
-args:
-  {{- . | toYaml | nindent 2 }}
-{{- end -}}
 {{- end -}}

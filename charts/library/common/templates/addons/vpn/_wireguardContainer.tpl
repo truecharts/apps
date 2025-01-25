@@ -1,43 +1,8 @@
 {{/*
 The gluetun sidecar container to be inserted.
 */}}
-{{- define "tc.v1.common.addon.vpn.wireguard.container" -}}
-enabled: true
-imageSelector: wireguardImage
-probes:
-{{- if $.Values.addons.vpn.livenessProbe }}
-  liveness:
-  {{- toYaml . | nindent 2 }}
-{{- else }}
-  liveness:
-    enabled: false
-{{- end }}
-  readiness:
-    enabled: false
-  startup:
-    enabled: false
-resources:
-  excludeExtra: true
-  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $ "objectData" .Values.addons.vpn.resources ) | trim) }}
-    {{- . | nindent 2 }}
-  {{- end }}
-securityContext:
-  runAsUser: 568
-  runAsGroup: 568
-  readOnlyRootFilesystem: false
-  allowPrivilegeEscalation: true
-  capabilities:
-    add:
-      - AUDIT_WRITE
-      - NET_ADMIN
-      - SETUID
-      - SETGID
-      - SYS_MODULE
-
+{{- define "tc.v1.common.addon.vpn.wireguard.containerModify" -}}
 env:
-{{- with $.Values.addons.vpn.env }}
-  {{- . | toYaml | nindent 2 }}
-{{- end }}
   SEPARATOR: ";"
   IPTABLES_BACKEND: "nft"
 {{- if $.Values.addons.vpn.killSwitch }}
@@ -56,16 +21,4 @@ env:
 {{- end -}}
 {{- end -}}
 
-{{- range $envList := $.Values.addons.vpn.envList -}}
-  {{- if and $envList.name $envList.value }}
-  {{ $envList.name }}: {{ $envList.value | quote }}
-  {{- else -}}
-    {{- fail "Please specify name/value for VPN environment variable" -}}
-  {{- end -}}
-{{- end -}}
-
-{{- with $.Values.addons.vpn.args }}
-args:
-  {{- . | toYaml | nindent 2 }}
-{{- end -}}
 {{- end -}}
