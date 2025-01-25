@@ -9,10 +9,8 @@ It will include / inject the required templates based on the given values.
 {{- end -}}
 {{- if .Values.addons.netshoot.enabled -}}
   {{/* Append the code-server container to the workloads */}}
-  {{- $container := include "tc.v1.common.lib.pod.containerSpawner" (dict "rootCtx" $ "objectData" .Values.addons.netshoot.container ) | trim | fromYaml -}}
-  {{- if $container -}}
     {{- $workload := get $.Values.workload $targetSelector -}}
-    {{- $_ := set $workload.podSpec.containers "netshoot" $container -}}
-  {{- end -}}
+    {{- $_ := set $workload.podSpec.containers "netshoot" .Values.addons.netshoot.container -}}
+
 {{- end -}}
 {{- end -}}

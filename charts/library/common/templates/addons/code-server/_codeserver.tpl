@@ -38,11 +38,8 @@ It will include / inject the required templates based on the given values.
 
 
   {{/* Append the code-server container to the workloads */}}
-  {{- $container := include "tc.v1.common.lib.pod.containerSpawner" (dict "rootCtx" $ "objectData" .Values.addons.codeserver.container ) | trim | fromYaml -}}
-  {{- if $container -}}
     {{- $workload := get $.Values.workload $targetSelector -}}
-    {{- $_ := set $workload.podSpec.containers "codeserver" $container -}}
-  {{- end -}}
+    {{- $_ := set $workload.podSpec.containers "codeserver" .Values.addons.codeserver.container -}}
 
   {{/* Add the code-server ingress */}}
   {{- if .Values.addons.codeserver.ingress.enabled -}}
