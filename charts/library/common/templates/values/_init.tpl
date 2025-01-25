@@ -9,7 +9,7 @@
     {{- $commonValues := mustDeepCopy .Values.common -}}
     {{- $chartValues := mustDeepCopy (omit .Values "common") -}}
     {{- $mergedValues := mustMergeOverwrite $commonValues $chartValues -}}
-    {{- range $mergedValues.addons -}}
+    {{- range $mergedValues.dependencies -}}
         {{- if .enabled -}}
           {{- $mergedValues = mustMergeOverwrite $mergedValues . -}}
         {{- end -}}
