@@ -20,7 +20,7 @@ command:
   - /usr/local/bin/containerboot
 resources:
   excludeExtra: true
-  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $rootCtx "objectData" .Values.addons.vpn.resources ) | trim) }}
+  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $ "objectData" .Values.addons.vpn.resources ) | trim) }}
     {{- . | nindent 2 }}
   {{- end }}
 securityContext:

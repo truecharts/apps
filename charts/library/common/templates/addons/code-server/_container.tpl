@@ -20,7 +20,7 @@ imageSelector: "codeserverImage"
 imagePullPolicy: {{ .Values.codeserverImage.pullPolicy }}
 resources:
   excludeExtra: true
-  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $rootCtx "objectData" .Values.addons.codeserver.resources ) | trim) }}
+  {{- with (include "tc.v1.common.lib.container.resources" (dict "rootCtx" $ "objectData" .Values.addons.codeserver.resources ) | trim) }}
     {{- . | nindent 2 }}
   {{- end }}
 securityContext:
