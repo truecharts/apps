@@ -5,16 +5,13 @@ It will include / inject the required templates based on the given values.
 {{- define "tc.v1.common.addon.codeserver" -}}
 {{- $targetSelector := "main" -}}
 {{- if $.Values.addons.codeserver.targetSelector -}}
-  {{- $targetSelector = $.Values.addons.codeserver.targetSelector -}}
+  {{- $targetSelector = $.Values.addons.codeserver.container.targetSelector -}}
 {{- end -}}
-{{- if .Values.addons.codeserver.enabled -}}
-  {{/* Append the code-server container to the workloads */}}
-  {{- $container := include "tc.v1.common.addon.codeserver.container" . | fromYaml -}}
-  {{- if $container -}}
-    {{- $workload := get $.Values.workload $targetSelector -}}
-    {{- $_ := set $workload.podSpec.containers "codeserver" $container -}}
-  {{- end -}}
 
+{{- if .Values.addons.codeserver.enabled -}}
+
+{{/* Add the code-server service */}}
+  {{- if .Values.addons.codeserver.service.enabled -}}
   {{- $hasPrimaryService := false -}}
   {{- range $svcName, $svcValues := .Values.service -}}
     {{- $enabled := (include "tc.v1.common.lib.util.enabled" (dict
@@ -37,6 +34,14 @@ It will include / inject the required templates based on the given values.
       {{- $_ := set $serviceValues "primary" true -}}
     {{- end -}}
     {{- $_ := set .Values.service "codeserver" $serviceValues -}}
+  {{- end -}}
+
+
+  {{/* Append the code-server container to the workloads */}}
+  {{- $container := include "tc.v1.common.lib.pod.containerSpawner" (dict "rootCtx" $ "objectData" .Values.addons.codeserver.container ) | trim | fromYaml -}}
+  {{- if $container -}}
+    {{- $workload := get $.Values.workload $targetSelector -}}
+    {{- $_ := set $workload.podSpec.containers "codeserver" $container -}}
   {{- end -}}
 
   {{/* Add the code-server ingress */}}

@@ -898,29 +898,44 @@ addons:
   # -- The common library supports adding a code-server add-on to access files. It can be configured under this key.
   # @default -- See values.yaml
   codeserver:
+      enabled: true
+      # -- Specify the working dir that will be opened when code-server starts
+      # If not given, the app will default to the mountpah of the first specified volumeMount
+      workingDir: "/"
       # -- Enable running a code-server container in the pod
-      enabled: false
-
-      # -- Set any environment variables for code-server here
-      env: {}
-
-      # -- All variables specified here will be added to the codeserver sidecar container
-      # See the documentation of the codeserver image for all config values
-      envList: []
-      #   - name: someenv
-      #    value: somevalue
-      # -- Set codeserver command line arguments.
-      # Consider setting --user-data-dir to a persistent location to preserve code-server setting changes
-      args:
+      container:
+        enabled: false
+        probes:
+          liveness:
+            enabled: true
+            port: 80 #{{ .Values.service.codeserver.ports.codeserver.port }}
+            path: "/"
+          readiness:
+            enabled: true
+            port: 80 #{{ .Values.service.codeserver.ports.codeserver.port }}
+            path: "/"
+          startup:
+            enabled: true
+            port: 80 # {{ .Values.service.codeserver.ports.codeserver.port }}
+            path: "/"
+        imageSelector: "codeserverImage"
+        resources:
+          excludeExtra: true
+        securityContext:
+          runAsUser: 0
+          runAsGroup: 0
+          runAsNonRoot: false
+          readOnlyRootFilesystem: false
+        args:
+        - "--port"
+        - "{{ .Values.addons.codeserver.service.ports.codeserver.port }}"
+        - '{{ .Values.addons.codeserver.workingDir | default "/" }}'
         - --auth
         - none
         # - --user-data-dir
         # - "/config/.vscode"
-      # -- Select a container to add the addon to
-      targetSelector:
-      # -- Specify the working dir that will be opened when code-server starts
-      # If not given, the app will default to the mountpah of the first specified volumeMount
-      workingDir: "/"
+        # -- Select a container to add the addon to
+        targetSelector:
 
       service:
         # -- Enable a service for the code-server add-on.
