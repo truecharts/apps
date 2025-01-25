@@ -815,7 +815,7 @@ addons:
   # -- The common chart supports adding a VPN add-on. It can be configured under this key.
   # @default -- See values.yaml
   vpn:
-      enabled: false
+      enabled: true
       # -- Specify the VPN type. Valid options are disabled, gluetun, openvpn, wireguard or tailscale
       # OpenVPN and Wireguard are considered deprecated
       type: disabled

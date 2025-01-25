@@ -57,28 +57,28 @@ It will include / inject the required templates based on the given values.
     {{- $container := dict -}}
     {{- $containerModify := dict -}}
     {{- if eq "gluetun" $.Values.addons.vpn.type -}}
-      {{- $container = .Values.addons.vpn.gluetun.container -}}
+      {{- $container = $.Values.addons.vpn.gluetun.container -}}
       {{- $containerModify = include "tc.v1.common.addon.vpn.gluetun.containerModify" $ | fromYaml -}}
 
     {{- else if eq "tailscale" $.Values.addons.vpn.type -}}
       {{/* FIXME: https://github.com/tailscale/tailscale/issues/8188 */}}
       {{- $_ := set $.Values.podOptions "automountServiceAccountToken" true -}}
-      {{- $container = .Values.addons.vpn.tailscale.container -}}
+      {{- $container = $.Values.addons.vpn.tailscale.container -}}
       {{- $containerModify = include "tc.v1.common.addon.vpn.tailscale.containerModify" $ | fromYaml -}}
 
     {{- else if eq "openvpn" $.Values.addons.vpn.type -}}
-      {{- $container = .Values.addons.vpn.openvpn.container -}}
+      {{- $container = $.Values.addons.vpn.openvpn.container -}}
       {{- $containerModify = include "tc.v1.common.addon.vpn.openvpn.containerModify" $ | fromYaml -}}
 
     {{- else if eq "wireguard" $.Values.addons.vpn.type -}}
-      {{- $container = .Values.addons.vpn.wireguard.container -}}
+      {{- $container = $.Values.addons.vpn.wireguard.container -}}
       {{- $containerModify = include "tc.v1.common.addon.vpn.wireguard.containerModify" $ | fromYaml -}}
 
     {{- end -}}
-    {{- if $container -}}
+    {{- if $container.enabled -}}
       {{- $mergedContainer := mustMergeOverwrite $container $containerModify -}}
       {{- $workload := get $.Values.workload . -}}
-      {{- $_ := set $workload.podSpec.containers $container $mergedContainer -}}
+      {{- $_ := set $workload.podSpec.containers "vpn" $mergedContainer -}}
     {{- end -}}
   {{- end -}}
 
