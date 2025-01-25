@@ -809,144 +809,145 @@ addons:
   # -- The common chart supports adding a VPN add-on. It can be configured under this key.
   # @default -- See values.yaml
   vpn:
-    # -- Specify the VPN type. Valid options are disabled, gluetun, openvpn, wireguard or tailscale
-    # OpenVPN and Wireguard are considered deprecated
-    type: disabled
+      enabled: false
+      # -- Specify the VPN type. Valid options are disabled, gluetun, openvpn, wireguard or tailscale
+      # OpenVPN and Wireguard are considered deprecated
+      type: disabled
 
-    # -- Tailscale specific configuration
-    # @default -- See below
-    # See more info for the configuration
-    # https://github.com/tailscale/tailscale/blob/main/docs/k8s/run.sh
-    tailscale:
-      # -- Auth key to connect to the VPN Service
-      authkey: ""
-      # As a sidecar, it should only need to run in userspace
-      userspace: true
-      auth_once: true
-      accept_dns: false
-      routes: ""
-      dest_ip: ""
-      sock5_server: ""
-      extra_args: ""
-      daemon_extra_args: ""
-      outbound_http_proxy_listen: ""
-      # -- Annotations for tailscale sidecar
-      annotations: {}
+      # -- Tailscale specific configuration
+      # @default -- See below
+      # See more info for the configuration
+      # https://github.com/tailscale/tailscale/blob/main/docs/k8s/run.sh
+      tailscale:
+        # -- Auth key to connect to the VPN Service
+        authkey: ""
+        # As a sidecar, it should only need to run in userspace
+        userspace: true
+        auth_once: true
+        accept_dns: false
+        routes: ""
+        dest_ip: ""
+        sock5_server: ""
+        extra_args: ""
+        daemon_extra_args: ""
+        outbound_http_proxy_listen: ""
+        # -- Annotations for tailscale sidecar
+        annotations: {}
 
-    # -- OpenVPN specific configuration
-    # @default -- See below
-    openvpn:
-      # -- Credentials to connect to the VPN Service (used with -a)
-      # Only using password is enough
-      username: ""
-      password: ""
+      # -- OpenVPN specific configuration
+      # @default -- See below
+      openvpn:
+        # -- Credentials to connect to the VPN Service (used with -a)
+        # Only using password is enough
+        username: ""
+        password: ""
 
-    # -- All variables specified here will be added to the vpn sidecar container
-    # See the documentation of the VPN image for all config values
-    env: {}
-    #  TZ: UTC
+      # -- All variables specified here will be added to the vpn sidecar container
+      # See the documentation of the VPN image for all config values
+      env: {}
+      #  TZ: UTC
 
-    # -- All variables specified here will be added to the vpn sidecar container
-    # See the documentation of the VPN image for all config values
-    envList: []
-    #  - name: someenv
-    #   value: somevalue
+      # -- All variables specified here will be added to the vpn sidecar container
+      # See the documentation of the VPN image for all config values
+      envList: []
+      #  - name: someenv
+      #   value: somevalue
 
-    # -- you can directly specify the config file here
-    config: ""
+      # -- you can directly specify the config file here
+      config: ""
 
-    scripts:
-      # -- you can directly specify the upscript here
-      up: ""
-      # some script
+      scripts:
+        # -- you can directly specify the upscript here
+        up: ""
+        # some script
 
-      # -- you can directly specify the downscript here
-      down: ""
-      # some script
+        # -- you can directly specify the downscript here
+        down: ""
+        # some script
 
-    # -- Provide a customized vpn configuration file location to be used by the VPN.
-    configFile: ""
+      # -- Provide a customized vpn configuration file location to be used by the VPN.
+      configFile: ""
 
-    # -- Provide a customized vpn configuration folder location to be added to the VPN container
-    # The config file needs to be mounted seperately
-    # the upscript and downscript need to be named: upscript.sh and downscript.sh respectively
-    configFolder: ""
+      # -- Provide a customized vpn configuration folder location to be added to the VPN container
+      # The config file needs to be mounted seperately
+      # the upscript and downscript need to be named: upscript.sh and downscript.sh respectively
+      configFolder: ""
 
-    # -- Provide an existing secret for vpn config storage
-    existingSecret: ""
+      # -- Provide an existing secret for vpn config storage
+      existingSecret: ""
 
-    # -- select pods to bind vpn addon to
-    # Add "codeserver" to also add the codeserver pod to VPN
-    targetSelector:
-      - main
+      # -- select pods to bind vpn addon to
+      # Add "codeserver" to also add the codeserver pod to VPN
+      targetSelector:
+        - main
 
-    ## Only for Wireguard and OpenVPN
-    killSwitch: true
-    excludedNetworks_IPv4: []
-    excludedNetworks_IPv6: []
+      ## Only for Wireguard and OpenVPN
+      killSwitch: true
+      excludedNetworks_IPv4: []
+      excludedNetworks_IPv6: []
 
-    ## For Gluetun to enable kubernetes network communication
-    inputPorts: []
+      ## For Gluetun to enable kubernetes network communication
+      inputPorts: []
 
   # -- The common library supports adding a code-server add-on to access files. It can be configured under this key.
   # @default -- See values.yaml
   codeserver:
-    # -- Enable running a code-server container in the pod
-    enabled: false
-
-    # -- Set any environment variables for code-server here
-    env: {}
-
-    # -- All variables specified here will be added to the codeserver sidecar container
-    # See the documentation of the codeserver image for all config values
-    envList: []
-    #   - name: someenv
-    #    value: somevalue
-    # -- Set codeserver command line arguments.
-    # Consider setting --user-data-dir to a persistent location to preserve code-server setting changes
-    args:
-      - --auth
-      - none
-      # - --user-data-dir
-      # - "/config/.vscode"
-    # -- Select a container to add the addon to
-    targetSelector:
-    # -- Specify the working dir that will be opened when code-server starts
-    # If not given, the app will default to the mountpah of the first specified volumeMount
-    workingDir: "/"
-
-    service:
-      # -- Enable a service for the code-server add-on.
-      enabled: true
-      type: ClusterIP
-      # Specify the default port information
-      ports:
-        codeserver:
-          enabled: true
-          primary: true
-          protocol: http
-          port: 12321
-
-    ingress:
-      # -- Enable an ingress for the code-server add-on.
+      # -- Enable running a code-server container in the pod
       enabled: false
-      annotations: {}
-      #   kubernetes.io/ingress.class: nginx
-      labels: {}
-      hosts:
-        - host: code.chart-example.local
-          paths:
-            - path: /
-              # Ignored if not kubeVersion >= 1.14-0
-              pathType: Prefix
-      tls: []
+
+      # -- Set any environment variables for code-server here
+      env: {}
+
+      # -- All variables specified here will be added to the codeserver sidecar container
+      # See the documentation of the codeserver image for all config values
+      envList: []
+      #   - name: someenv
+      #    value: somevalue
+      # -- Set codeserver command line arguments.
+      # Consider setting --user-data-dir to a persistent location to preserve code-server setting changes
+      args:
+        - --auth
+        - none
+        # - --user-data-dir
+        # - "/config/.vscode"
+      # -- Select a container to add the addon to
+      targetSelector:
+      # -- Specify the working dir that will be opened when code-server starts
+      # If not given, the app will default to the mountpah of the first specified volumeMount
+      workingDir: "/"
+
+      service:
+        # -- Enable a service for the code-server add-on.
+        enabled: true
+        type: ClusterIP
+        # Specify the default port information
+        ports:
+          codeserver:
+            enabled: true
+            primary: true
+            protocol: http
+            port: 12321
+
+      ingress:
+        # -- Enable an ingress for the code-server add-on.
+        enabled: false
+        annotations: {}
+        #   kubernetes.io/ingress.class: nginx
+        labels: {}
+        hosts:
+          - host: code.chart-example.local
+            paths:
+              - path: /
+                # Ignored if not kubeVersion >= 1.14-0
+                pathType: Prefix
+        tls: []
 
   netshoot:
-    # -- Enable running a netshoot container in the pod
-    enabled: false
+      # -- Enable running a netshoot container in the pod
+      enabled: false
 
-    # -- Set any environment variables for netshoot here
-    env: {}
+      # -- Set any environment variables for netshoot here
+      env: {}
 
 ##########################################################################
 # This section contains some pre-config for frequently used dependencies #
