@@ -1075,6 +1075,10 @@ addons:
 
 dependencies:
   mariadb:
+    ## TODO: ensure probes link to correct svc
+    ## TODO: Integrate with waits
+    ## TODO: make waits toggleable
+    ## TODO: move passwords away from root level, creds?
     enabled: false
     workload:
       mariadb:
