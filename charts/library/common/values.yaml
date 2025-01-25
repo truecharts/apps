@@ -567,6 +567,12 @@ postgresVectors16Image:
   tag: "16.3-v0.2.1"
   pullPolicy: IfNotPresent
 
+mariadbImage:
+  repository: docker.io/bitnami/mariadb
+  pullPolicy: IfNotPresent
+  tag: 11.6.2@sha256:1903a4cec8cdb3eb157e05c6cb65ef761445468da6c01bb54be4e16561b2a7c6
+
+
 # -- OpenVPN specific configuration
 # @default -- See below
 openvpnImage:
@@ -805,7 +811,81 @@ metrics:
 
 # -- The common chart supports several add-ons. These can be configured under this key.
 # @default -- See below
-addons: {}
+addons:
+  mariadb:
+    enabled: false
+    workload:
+      mariadb:
+        podSpec:
+          containers:
+            mariadb:
+              env:
+                MARIADB_PASSWORD: "{{ .Values.password }}"
+                MARIADB_ROOT_PASSWORD: "{{ .Values.rootPassword }}"
+                MARIADB_USER: "{{ .Values.mariadbUsername }}"
+                MARIADB_DATABASE: "{{ .Values.mariadbDatabase }}"
+                MARIADB_EXTRA_FLAGS: "--init-file=/init/passinit.sql"
+              probes:
+                liveness:
+                  enabled: true
+                  type: exec
+                  command:
+                    - /bin/bash
+                    - -ec
+                    - "until /opt/bitnami/scripts/mariadb/healthcheck.sh; do sleep 2; done"
+                readiness:
+                  enabled: true
+                  type: exec
+                  command:
+                    - /bin/bash
+                    - -ec
+                    - "until /opt/bitnami/scripts/mariadb/healthcheck.sh; do sleep 2; done"
+                startup:
+                  enabled: true
+                  type: exec
+                  command:
+                    - /bin/bash
+                    - -ec
+                    - "until /opt/bitnami/scripts/mariadb/healthcheck.sh; do sleep 2; done"
+    service:
+      mariadb:
+        ports:
+          mariadb:
+            port: 3306
+            targetPort: 3306
+
+    persistence:
+      mariadb-data:
+        enabled: true
+        mountPath: "/bitnami/mariadb"
+      mariadb-passinit:
+        enabled: true
+        type: configmap
+        objectName: passinit
+        items:
+          - key: passinit.sql
+            path: passinit.sql
+        targetSelector:
+          main:
+            main:
+              subPath: passinit.sql
+              mountPath: /init/passinit.sql
+
+    configmap:
+      mariadb-passinit:
+        enabled: true
+        data:
+          passinit.sql: |
+            ALTER USER root@'%' IDENTIFIED VIA mysql_native_password USING PASSWORD("{{ .Values.mariadb-rootPassword }}");
+            ALTER USER {{ .Values.mariadbUsername }}@'%' IDENTIFIED VIA mysql_native_password USING PASSWORD("{{ .Values.mariadb-password }}");
+            FLUSH PRIVILEGES;
+
+    mariadbUsername: "test"
+    mariadbDatabase: "test"
+    ## DEVNOTE: These password defaults always need to match common
+    mariadb-rootPassword: "PLACEHOLDERROOTPASSWORD"
+    mariadb-password: "PLACEHOLDERPASSWORD"
+
 
 ##########################################################################
 # This section contains some pre-config for frequently used dependencies #
