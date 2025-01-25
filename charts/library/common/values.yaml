@@ -898,7 +898,7 @@ addons:
   # -- The common library supports adding a code-server add-on to access files. It can be configured under this key.
   # @default -- See values.yaml
   codeserver:
-      enabled: true
+      enabled: false
       # -- Specify the working dir that will be opened when code-server starts
       # If not given, the app will default to the mountpah of the first specified volumeMount
       workingDir: "/"
@@ -964,11 +964,33 @@ addons:
         tls: []
 
   netshoot:
-      # -- Enable running a netshoot container in the pod
-      enabled: false
-
-      # -- Set any environment variables for netshoot here
-      env: {}
+    # -- Enable running a netshoot container in the pod
+    enabled: false
+    container:
+      enabled: true
+      command:
+        - /bin/sh
+        - -c
+        - sleep infinity
+      probes:
+        liveness:
+          enabled: false
+        readiness:
+          enabled: false
+        startup:
+          enabled: false
+      imageSelector: "netshootImage"
+      resources:
+        excludeExtra: true
+      securityContext:
+        runAsUser: 0
+        runAsGroup: 0
+        runAsNonRoot: false
+        readOnlyRootFilesystem: false
+        capabilities:
+          add:
+            - NET_ADMIN
+            - NET_RAW
 
 
 dependencies:
