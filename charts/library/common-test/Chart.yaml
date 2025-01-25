@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: unknown
 dependencies:
   - name: common
-    version: ~26.0.0
+    version: ~25.5.0
     repository: file://../common/
     condition: ""
     alias: ""
