@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2024.07.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://hub.docker.com/r/pihole/pihole
   - https://pi-hole.net/
 type: application
-version: 18.7.1
+version: 18.7.2

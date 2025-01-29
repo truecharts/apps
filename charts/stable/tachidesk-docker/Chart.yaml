@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: preiew
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/suwayomi/docker-tachidesk
   - https://github.com/truecharts/charts/tree/master/charts/stable/tachidesk-docker
 type: application
-version: 8.5.1
+version: 8.5.2

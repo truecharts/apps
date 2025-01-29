@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.10.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,4 +31,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/impostor-server
   - https://hub.docker.com/r/aeonlucid/impostor
 type: application
-version: 10.6.2
+version: 10.6.3

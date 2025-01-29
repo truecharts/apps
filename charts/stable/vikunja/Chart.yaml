@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.24.6
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -39,4 +39,4 @@ sources:
   - https://hub.docker.com/r/vikunja/vikunja
   - https://vikunja.io/docs
 type: application
-version: 15.10.2
+version: 15.10.3

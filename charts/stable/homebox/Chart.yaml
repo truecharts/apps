@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.17.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/sysadminsmedia/homebox
   - https://github.com/truecharts/charts/tree/master/charts/stable/homebox
 type: application
-version: 8.11.1
+version: 8.11.2

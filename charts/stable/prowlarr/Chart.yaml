@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.30.2.4939
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/k8s-at-home/container-images
   - https://github.com/truecharts/charts/tree/master/charts/stable/prowlarr
 type: application
-version: 18.14.3
+version: 18.14.4

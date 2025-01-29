@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 5.0.13
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://gitlab.com/tinyMediaManager/tinyMediaManager
   - https://hub.docker.com/r/tinymediamanager/tinymediamanager
 type: application
-version: 12.5.1
+version: 12.5.2

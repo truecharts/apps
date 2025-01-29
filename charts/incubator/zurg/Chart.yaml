@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: 0.9.3
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -29,4 +29,4 @@ sources:
   - https://ghcr.io/geek-cookbook/zurg
   - https://github.com/truecharts/charts/tree/master/charts/incubator/zurg
 type: application
-version: 0.3.1
+version: 0.3.2

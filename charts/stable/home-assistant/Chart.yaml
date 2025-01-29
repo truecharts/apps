@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2025.1.4
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -35,4 +35,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/home-assistant
   - https://hub.docker.com/r/homeassistant/home-assistant
 type: application
-version: 27.1.2
+version: 27.1.3

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 7.1.217
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/system/kubernetes-reflector
   - https://hub.docker.com/r/emberstack/kubernetes-reflector
 type: application
-version: 6.5.1
+version: 6.5.2

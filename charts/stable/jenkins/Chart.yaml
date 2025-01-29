@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.495.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/jenkins
   - https://hub.docker.com/r/jenkins/jenkins
 type: application
-version: 9.31.0
+version: 9.31.1

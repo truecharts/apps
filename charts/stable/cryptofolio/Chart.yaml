@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.2.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -32,4 +32,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/cryptofolio
   - https://hub.docker.com/r/xtrendence/cryptofolio
 type: application
-version: 14.5.1
+version: 14.5.2

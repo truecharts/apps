@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.29.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -38,4 +38,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/plexripper
   - https://hub.docker.com/r/plexripper/plexripper
 type: application
-version: 10.14.1
+version: 10.14.2

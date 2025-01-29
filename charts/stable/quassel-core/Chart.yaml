@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.14.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,4 +31,4 @@ sources:
   - https://ghcr.io/linuxserver/quassel-core
   - https://github.com/truecharts/charts/tree/master/charts/stable/quassel-core
 type: application
-version: 13.5.1
+version: 13.5.2

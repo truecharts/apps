@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.125.5
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -40,4 +40,4 @@ sources:
   - https://github.com/immich-app/immich
   - https://github.com/truecharts/charts/tree/master/charts/stable/immich
 type: application
-version: 17.44.11
+version: 17.44.12

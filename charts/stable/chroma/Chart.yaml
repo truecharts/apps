@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.6.3
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/chroma-core/chroma
   - https://github.com/truecharts/charts/tree/master/charts/stable/chroma
 type: application
-version: 4.6.1
+version: 4.6.2

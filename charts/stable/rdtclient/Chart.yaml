@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.0.95
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/rdtclient
   - https://hub.docker.com/r/p3terx/aria2-pro
 type: application
-version: 6.5.1
+version: 6.5.2

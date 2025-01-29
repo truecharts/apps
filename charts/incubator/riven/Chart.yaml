@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: 0.20.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -30,4 +30,4 @@ sources:
   - https://ghcr.io/elfhosted/riven-frontend
   - https://github.com/truecharts/charts/tree/master/charts/incubator/riven
 type: application
-version: 0.10.2
+version: 0.10.3

@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: 39.137.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -29,4 +29,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/renovate
   - https://hub.docker.com/r/renovate/renovate
 type: application
-version: 1.8.0
+version: 1.8.1

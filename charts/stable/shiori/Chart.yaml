@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.7.4
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/go-shiori/shiori/pkgs/container/shiori
   - https://github.com/truecharts/charts/tree/master/charts/stable/shiori
 type: application
-version: 18.6.1
+version: 18.6.2

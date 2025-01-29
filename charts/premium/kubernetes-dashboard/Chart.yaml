@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: latest
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -45,4 +45,4 @@ sources:
   - https://hub.docker.com/r/kubernetesui/dashboard-web
   - https://kubernetes-dashboard.universe.tf
 type: application
-version: 1.13.2
+version: 1.13.3

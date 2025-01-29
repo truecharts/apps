@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 20220121.0.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -42,4 +42,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/photoprism
   - https://hub.docker.com/r/photoprism/photoprism
 type: application
-version: 24.5.2
+version: 24.5.3

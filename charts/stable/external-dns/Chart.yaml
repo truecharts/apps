@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.15.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/kubernetes-sigs/external-dns
   - https://github.com/truecharts/charts/tree/master/charts/stable/external-dns
 type: application
-version: 6.6.1
+version: 6.6.2

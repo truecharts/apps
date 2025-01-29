@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 3.5.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://grafana.com/grafana/dashboards/10347-proxmox-via-prometheus/
   - https://hub.docker.com/r/prompve/prometheus-pve-exporter
 type: application
-version: 0.2.0
+version: 0.2.1

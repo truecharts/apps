@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.12.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -42,4 +42,4 @@ sources:
   - https://hub.docker.com/r/jc21/nginx-proxy-manager
   - https://nginxproxymanager.com/
 type: application
-version: 11.13.2
+version: 11.13.3

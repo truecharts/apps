@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 8.5.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -37,4 +37,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/digikam
   - https://www.digikam.org/
 type: application
-version: 14.2.1
+version: 14.2.2

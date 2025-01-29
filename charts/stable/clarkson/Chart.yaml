@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.1.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -43,4 +43,4 @@ sources:
   - https://github.com/linuxserver/Clarkson
   - https://github.com/truecharts/charts/tree/master/charts/stable/clarkson
 type: application
-version: 14.12.2
+version: 14.12.3

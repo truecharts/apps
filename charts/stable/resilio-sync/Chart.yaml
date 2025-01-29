@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 3.0.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -35,4 +35,4 @@ sources:
   - https://github.com/orgs/linuxserver/packages/container/package/resilio-sync
   - https://github.com/truecharts/charts/tree/master/charts/stable/resilio-sync
 type: application
-version: 17.4.1
+version: 17.4.2

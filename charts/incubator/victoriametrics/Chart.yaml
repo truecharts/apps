@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.110.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/victoriametrics
   - https://hub.docker.com/r/victoriametrics/victoria-metrics
 type: application
-version: 2.14.1
+version: 2.14.2

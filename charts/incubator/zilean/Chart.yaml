@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: 3.4.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -29,4 +29,4 @@ sources:
   - https://ghcr.io/elfhosted/zilean
   - https://github.com/truecharts/charts/tree/master/charts/incubator/zilean
 type: application
-version: 1.3.1
+version: 1.3.2

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.11.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://quay.io/brancz/kube-rbac-proxy
   - https://volsync.readthedocs.io/
 type: application
-version: 2.8.1
+version: 2.8.2

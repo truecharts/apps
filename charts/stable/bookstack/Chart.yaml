@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 24.12.20241223
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -44,4 +44,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/bookstack
   - https://www.bookstackapp.com/
 type: application
-version: 15.14.2
+version: 15.14.3

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.32.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/teslamate
   - https://hub.docker.com/r/teslamate/teslamate
 type: application
-version: 2.8.1
+version: 2.8.2

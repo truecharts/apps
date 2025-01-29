@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 30.0.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -49,4 +49,4 @@ sources:
   - https://hub.docker.com/r/collabora/code
   - https://hub.docker.com/r/nginxinc/nginx-unprivileged
 type: application
-version: 32.8.6
+version: 32.8.7

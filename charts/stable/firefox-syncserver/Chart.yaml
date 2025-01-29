@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.8.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -35,4 +35,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/firefox-syncserver
   - https://moz-services-docs.readthedocs.io/en/latest/howtos/run-sync-1.5.html
 type: application
-version: 19.5.1
+version: 19.5.2

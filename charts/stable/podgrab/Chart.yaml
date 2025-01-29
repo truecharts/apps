@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.0.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -32,4 +32,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/podgrab
   - https://hub.docker.com/r/akhilrex/podgrab
 type: application
-version: 19.5.1
+version: 19.5.2

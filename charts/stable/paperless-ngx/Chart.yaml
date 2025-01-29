@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.14.6
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -43,4 +43,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/paperless-ngx
   - https://paperless-ngx.readthedocs.io/en/latest/
 type: application
-version: 9.17.3
+version: 9.17.4

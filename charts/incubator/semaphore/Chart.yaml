@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.11.3
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/semaphore
   - https://hub.docker.com/r/semaphoreui/semaphore
 type: application
-version: 4.4.2
+version: 4.4.3

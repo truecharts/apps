@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 24.12.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/tsmuxer
   - https://hub.docker.com/r/jlesage/tsmuxer
 type: application
-version: 11.8.1
+version: 11.8.2

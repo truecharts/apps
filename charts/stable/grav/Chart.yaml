@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.7.48
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/linuxserver/docker-grav
   - https://github.com/truecharts/charts/tree/master/charts/stable/grav
 type: application
-version: 13.5.2
+version: 13.5.3

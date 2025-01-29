@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.2.0.200
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/xteve
   - https://github.com/xteve-project/xTeVe
 type: application
-version: 15.5.1
+version: 15.5.2

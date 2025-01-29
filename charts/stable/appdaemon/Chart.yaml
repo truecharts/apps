@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 4.4.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/appdaemon
   - https://hub.docker.com/r/acockburn/appdaemon
 type: application
-version: 18.5.1
+version: 18.5.2

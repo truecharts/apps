@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 20240301.0.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://www.stefan1200.de/documentation/jts3servermod/readme.html
   - https://www.stefan1200.de/forum/index.php?PHPSESSID=r0m44032akt9jk7903ru9ejv2f&topic=2.0
 type: application
-version: 3.5.1
+version: 3.5.2

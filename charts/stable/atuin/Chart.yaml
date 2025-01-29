@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 18.4.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/atuinsh/atuin
   - https://github.com/truecharts/charts/tree/master/charts/stable/atuin
 type: application
-version: 5.7.1
+version: 5.7.2

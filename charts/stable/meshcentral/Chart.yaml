@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.1.38
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/Ylianst/MeshCentral
   - https://github.com/truecharts/charts/tree/master/charts/stable/meshcentral
 type: application
-version: 17.5.1
+version: 17.5.2

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2024.2.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -32,4 +32,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/rss-bridge
   - https://hub.docker.com/r/rssbridge/rss-bridge
 type: application
-version: 12.5.1
+version: 12.5.2

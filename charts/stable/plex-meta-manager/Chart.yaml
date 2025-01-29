@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.21.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -32,4 +32,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/plex-meta-manager
   - https://hub.docker.com/r/meisnate12/plex-meta-manager
 type: application
-version: 8.5.1
+version: 8.5.2

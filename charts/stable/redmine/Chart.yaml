@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 6.0.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/redmine
   - https://hub.docker.com/_/redmine
 type: application
-version: 14.0.2
+version: 14.0.3

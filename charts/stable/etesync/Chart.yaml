@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.14.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -46,4 +46,4 @@ sources:
   - https://hub.docker.com/r/victorrds/etesync
   - https://www.etesync.com/
 type: application
-version: 11.12.2
+version: 11.12.3

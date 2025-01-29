@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 8.2.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -40,4 +40,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/onlyoffice-document-server
   - https://hub.docker.com/r/onlyoffice/documentserver
 type: application
-version: 19.13.2
+version: 19.13.3

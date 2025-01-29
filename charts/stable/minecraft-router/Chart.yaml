@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.25.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/minecraft-router
   - https://hub.docker.com/r/itzg/mc-router
 type: application
-version: 1.5.1
+version: 1.5.2

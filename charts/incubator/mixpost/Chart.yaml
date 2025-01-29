@@ -7,7 +7,7 @@ apiVersion: v2
 appVersion: 2.0.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -47,4 +47,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/mixpost
   - https://hub.docker.com/r/inovector/mixpost
 type: application
-version: 2.2.4
+version: 2.2.5

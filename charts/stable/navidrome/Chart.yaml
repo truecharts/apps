@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.54.4
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/navidrome
   - https://hub.docker.com/r/deluan/navidrome
 type: application
-version: 21.7.1
+version: 21.7.2

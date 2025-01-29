@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.37.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/linkding
   - https://hub.docker.com/r/sissbruecker/linkding
 type: application
-version: 11.12.1
+version: 11.12.2

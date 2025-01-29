@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.9.21
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -35,4 +35,4 @@ sources:
   - https://hub.docker.com/r/difegue/lanraragi
   - https://sugoi.gitbook.io/lanraragi/
 type: application
-version: 11.5.1
+version: 11.5.2

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 5.2.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -40,4 +40,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/matomo
   - https://hub.docker.com/r/bitnami/matomo
 type: application
-version: 15.14.3
+version: 15.14.4

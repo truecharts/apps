@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 0.260.2
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -39,4 +39,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/nocodb
   - https://hub.docker.com/r/nocodb/nocodb
 type: application
-version: 15.19.2
+version: 15.19.3

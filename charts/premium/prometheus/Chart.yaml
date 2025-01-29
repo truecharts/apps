@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 3.0.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -42,4 +42,4 @@ sources:
   - https://hub.docker.com/r/bitnami/prometheus
   - https://quay.io/thanos/thanos
 type: application
-version: 21.1.5
+version: 21.1.6

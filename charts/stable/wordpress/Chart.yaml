@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 6.7.1
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -40,4 +40,4 @@ sources:
   - https://hub.docker.com/r/bitnami/wordpress
   - https://www.wordpress.org
 type: application
-version: 9.14.2
+version: 9.14.3

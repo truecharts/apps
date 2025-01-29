@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: ee8a20c
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/prologic/static
   - https://github.com/truecharts/charts/tree/master/charts/stable/static
 type: application
-version: 12.5.1
+version: 12.5.2

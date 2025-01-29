@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.0.16
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/hyperion-ng
   - https://hub.docker.com/r/sirfragalot/hyperion.ng
 type: application
-version: 15.5.1
+version: 15.5.2

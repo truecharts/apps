@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2024.11.0
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -44,4 +44,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/misskey
   - https://hub.docker.com/r/misskey/misskey
 type: application
-version: 10.16.2
+version: 10.16.3

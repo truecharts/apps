@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.96.4
 dependencies:
   - name: common
-    version: 25.4.10
+    version: 25.4.11
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,4 +31,4 @@ sources:
   - https://ghcr.io/linuxserver/openvscode-server
   - https://github.com/truecharts/charts/tree/master/charts/stable/openvscode-server
 type: application
-version: 11.12.2
+version: 11.12.3
