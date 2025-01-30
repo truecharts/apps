@@ -80,7 +80,7 @@ It will include / inject the required templates based on the given values.
       {{- $mergedContainer := mustMergeOverwrite $container $containerModify -}}
       {{- $workload := get $.Values.workload . -}}
       {{- $_ := set $workload.podSpec.containers "vpn" $mergedContainer -}}
-      {{- $end -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 
