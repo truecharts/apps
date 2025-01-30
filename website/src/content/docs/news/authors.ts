@@ -8,6 +8,12 @@ export const authors: Record<string, StarlightBlogAuthor> = {
     url: "https://github.com/privatepuffin",
     picture: "https://avatars.githubusercontent.com/u/7613738?v=4",
   },
+  privatepuffin: {
+    name: "Kjeld Schouten",
+    title: "Maintainer & Founder of TrueCharts",
+    url: "https://github.com/privatepuffin",
+    picture: "https://avatars.githubusercontent.com/u/7613738?v=4",
+  },
   stavros: {
     name: "Stavros Kois",
     title: "Core Contributor & Maintainer of TrueCharts",
