@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: latest
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://gitlab.com/LazyLibrarian/LazyLibrarian.git
   - https://lazylibrarian.gitlab.io
 type: application
-version: 20.5.0
+version: 20.5.2

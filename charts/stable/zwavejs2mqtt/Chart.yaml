@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 9.29.1
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -36,4 +36,4 @@ sources:
   - https://github.com/zwave-js/zwave-js-ui
   - https://hub.docker.com/r/zwavejs/zwave-js-ui
 type: application
-version: 21.19.0
+version: 21.19.1

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 4.0.0
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,4 +31,4 @@ sources:
   - https://ghcr.io/linuxserver/ddclient
   - https://github.com/truecharts/charts/tree/master/charts/stable/ddclient
 type: application
-version: 12.0.1
+version: 12.0.3

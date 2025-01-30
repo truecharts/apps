@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/elfhosted/zilean
   pullPolicy: IfNotPresent
-  tag: v3.3.6@sha256:5107ccbb319ed9a2dd8690532799b0b350dd4d49591161537c60683d12f3c81c
+  tag: v3.4.0@sha256:99d6c97d8e85d46c802e6ad4e9f1aed45b58116af8b5a1ed49b3eadf8ce289f8
 
 service:
   main:

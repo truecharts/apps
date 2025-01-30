@@ -9,14 +9,14 @@ apiVersion: v2
 appVersion: 0.14.2
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
     tags: []
     import-values: []
   - name: redis
-    version: 15.5.1
+    version: 15.6.1
     repository: oci://tccr.io/truecharts
     condition: redis.enabled
     alias: ""
@@ -46,4 +46,4 @@ sources:
   - https://hub.docker.com/r/victorrds/etesync
   - https://www.etesync.com/
 type: application
-version: 11.11.0
+version: 11.12.2

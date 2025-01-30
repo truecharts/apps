@@ -1,7 +1,7 @@
 image:
   repository: docker.io/papermerge/papermerge
   pullPolicy: IfNotPresent
-  tag: 3.2.0@sha256:11bd6e47622b295ee40f1e719c63235544121839a30e5083d959208931007b62
+  tag: 3.3.1@sha256:cb8abec5392d87ee95a7427f6b9ed9fd76bc7db2150f6fa58aaceff98e975321
 securityContext:
   container:
     runAsNonRoot: false
@@ -39,6 +39,8 @@ persistence:
   media:
     enabled: true
     mountPath: "/core_app/media"
+  varrun:
+    enabled: false
 redis:
   enabled: true
   redisUsername: papermerge

@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 24.12.1
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://hub.docker.com/r/jlesage/jdownloader-2
   - https://jdownloader.org/
 type: application
-version: 18.10.0
+version: 18.10.1

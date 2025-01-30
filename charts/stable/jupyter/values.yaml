@@ -21,11 +21,11 @@ tensorflowImage:
 datascienceImage:
   repository: docker.io/jupyter/datascience-notebook
   pullPolicy: IfNotPresent
-  tag: 2023-10-20@sha256:989636579136ff077456368ca44aed80cba7de7e9c30d989f23899bd79c9b5bf
+  tag: 2023-10-20@sha256:476c6e673e7d5d8b5059f8680b1c6a988942a79263da651bf302dc696ab311f2
 pysparkImage:
   repository: docker.io/jupyter/pyspark-notebook
   pullPolicy: IfNotPresent
-  tag: 2023-10-20@sha256:7d0b19de594978b8c0541194d91e29abba40e20aa124873bcf5e9cda2fe037f7
+  tag: 2023-10-20@sha256:58377aaa152b741e244f201679f96d909a024ea337088cc276b0ee32ab3f076f
 allsparkImage:
   repository: docker.io/jupyter/all-spark-notebook
   pullPolicy: IfNotPresent

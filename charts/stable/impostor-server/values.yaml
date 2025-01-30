@@ -4,7 +4,7 @@ image:
   tag: v1.10.2@sha256:3d7908876104f83aac9ac2a9f02103599652fff14ef9a85cfe8e991e8316b767
 nightlyImage:
   repository: docker.io/aeonlucid/impostor
-  tag: nightly@sha256:6f60b11485b053ab0115bd1d17a8e652bc9e73dbab8242b8c4ebdd4587624fc8
+  tag: nightly@sha256:6c796cbed49fa48fe9109131071b119b58974152176d57787e880424e3eac383
   pullPolicy: IfNotPresent
 service:
   main:

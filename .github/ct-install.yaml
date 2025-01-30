@@ -184,6 +184,7 @@ excluded-charts:
   - charts/stable/zalando-postgres-cluster
   - charts/stable/zigbee2mqtt
   - charts/stable/debian-apt-mirror
+  - charts/stable/dell-idrac-fan-controller
 chart-repos:
   - jetstack=https://charts.jetstack.io
   - grafana=https://grafana.github.io/helm-charts

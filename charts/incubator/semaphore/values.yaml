@@ -1,6 +1,6 @@
 image:
   repository: docker.io/semaphoreui/semaphore
-  tag: v2.11.2@sha256:22ce9e491161324125be3a1d234a4186b4192497903d13cb945a262fa56ea9fd
+  tag: v2.11.3@sha256:e9c2e9d67a250945efbdad6d6a047d07a2a649912317bf698356a5dbe32d30f7
   pullPolicy: IfNotPresent
 
 securityContext:

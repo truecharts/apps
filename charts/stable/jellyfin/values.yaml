@@ -1,11 +1,11 @@
 image:
   repository: ghcr.io/jellyfin/jellyfin
   pullPolicy: IfNotPresent
-  tag: 10.10.4@sha256:ea8f8bb0151dcdf6f1aa3669f457a463c68cc13f3e55bb2a2f16be55e86550e7
+  tag: 10.10.5@sha256:54340f53459858156896d5758a6eaa2cea9c95ff95c3c966f2fff1307e31660c
 broadcastProxyImage:
   repository: docker.io/alpine/socat
   pullPolicy: IfNotPresent
-  tag: 1.8.0.1@sha256:d95d6a210a87164533d444e8d7ebd586231b3387a27ee7c0732ade3d6c3b0f4d
+  tag: 1.8.0.1@sha256:d6450f96ed8b389f53929dc8ba0a4c42bc1db66d613efe923173a181f1256ca8
 service:
   main:
     ports:

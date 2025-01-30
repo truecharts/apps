@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM ubuntu:latest
+FROM ubuntu:latest@sha256:80dd3c3b9c6cecb9f1667e9290b3bc61b78c2678c02cbdae5f0fea92cc6734ab
 
 ARG TARGETPLATFORM
 ARG VERSION
@@ -8,11 +8,65 @@ USER root
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+ENV \
+    DEBCONF_NONINTERACTIVE_SEEN=true \
+    DEBIAN_FRONTEND="noninteractive" \
+    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn \
+    UMASK="0002" \
+    TZ="Etc/UTC"
+
+WORKDIR /app
+
+RUN \
+    set -eux \
+    && echo 'APT::Install-Recommends "false";' >/etc/apt/apt.conf.d/00recommends \
+    && echo 'APT::Install-Suggests "false";' >>/etc/apt/apt.conf.d/00recommends \
+    && echo 'APT::Get::Install-Recommends "false";' >>/etc/apt/apt.conf.d/00recommends \
+    && echo 'APT::Get::Install-Suggests "false";' >>/etc/apt/apt.conf.d/00recommends \
+    && \
+    apt-get -qq update \
+    && \
+    apt-get install -y \
+        bash \
+        ca-certificates \
+        curl \
+        dnsutils \
+        iputils-ping \
+        jo \
+        jq \
+        gnupg \
+        locales \
+        moreutils \
+        pv \
+        tini \
+    nano \
+        tzdata \
+        vim-tiny \
+        unrar \
+        unzip \
+        wget \
+        redis-server \
+        postgresql-client \
+        mariadb-client \
+        libicu74 \
+        pv \
+    git \
+    && \
+    localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
+    && ln -s /usr/bin/vim.tiny /usr/local/bin/vi \
+    && ln -s /usr/bin/vim.tiny /usr/local/bin/vim \
+    && ln -s /usr/bin/vim.tiny /usr/local/bin/nano \
+    && ln -s /usr/bin/vim.tiny /usr/local/bin/emacs
+
+ENV LANG en_US.UTF-8
+
+VOLUME ["/config"]
+
+COPY ./containers/apps/db-wait-mongodb/shim /shim
+
 # hadolint ignore=DL3008,DL3015,SC2086,SC2155,DL4001
 RUN \
   curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg \
-  && \
-  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list \
   && \
   wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add - \
   && \

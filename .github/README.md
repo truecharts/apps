@@ -24,7 +24,7 @@ All our charts are supposed to work together and be easy to setup using any helm
 
 ### Support
 
-Please check our [FAQ](https://truecharts.org/manual/FAQ), [manual](https://truecharts.org/manual/intro/) and [Issue tracker](https://github.com/truecharts/charts/issues) There is a significant chance your issue has been reported before!
+Please check our [FAQ](https://truecharts.org/general/faq/), [manual](https://truecharts.org/general/) and [Issue tracker](https://github.com/truecharts/charts/issues) There is a significant chance your issue has been reported before!
 
 Still something not working as expected? [Contact us!](https://discord.gg/tVsPTHWTtr) and we'll figure it out together!
 

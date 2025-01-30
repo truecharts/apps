@@ -6,7 +6,7 @@ image:
 frontendImage:
   repository: ghcr.io/elfhosted/riven-frontend
   pullPolicy: IfNotPresent
-  tag: v0.17.0@sha256:f8543deadc70e6386662a7feeb833398269eb513bf91c229e0a47be7394f7bea
+  tag: v0.17.0@sha256:fd4e742c26e36a13bddeac2489f778ad9f79cc1deae16854d806e9aa357cfd07
 
 service:
   main:

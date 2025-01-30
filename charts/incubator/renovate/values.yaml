@@ -1,7 +1,7 @@
 image:
   repository: renovate/renovate
   pullPolicy: IfNotPresent
-  tag: 39.128.0
+  tag: 39.137.1
 
 workload:
   main:

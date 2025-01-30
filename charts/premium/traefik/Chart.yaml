@@ -35,4 +35,4 @@ sources:
   - https://github.com/truecharts/containers/tree/master/apps/traefik
   - https://traefik.io/
 type: application
-version: 30.4.1
+version: 30.4.2

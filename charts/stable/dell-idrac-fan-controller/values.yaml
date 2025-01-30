@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/tigerblue77/dell_idrac_fan_controller
   pullPolicy: IfNotPresent
-  tag: latest@sha256:891696a575cf5b26a927fdee557dc0d18e71deaf94a5a008bbfcc2c7bc225b5a
+  tag: latest@sha256:eda09016a4acbee8883996f3b8cd4832a723200999bd037934675e75e2f00908
 service:
   main:
     enabled: false

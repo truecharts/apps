@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: latest
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://httpd.apache.org/docs/2.4/mod/mod_dav.html
   - https://hub.docker.com/r/apachewebdav/apachewebdav
 type: application
-version: 7.5.0
+version: 7.5.1

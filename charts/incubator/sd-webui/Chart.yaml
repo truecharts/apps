@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: latest
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/ahmetoner/sd-webui-docker/
   - https://github.com/truecharts/charts/tree/master/charts/incubator/sd-webui-docker
 type: application
-version: 2.5.0
+version: 2.5.1

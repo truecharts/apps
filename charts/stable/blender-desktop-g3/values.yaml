@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: docker.io/accetto/ubuntu-vnc-xfce-blender-g3
-  tag: latest@sha256:8f31db71f9c5cfc474652f22fc6dc88f5a9f0c7fa86c6050183fd91910455a78
+  tag: latest@sha256:17d331ef6ddde05b941e361bfb317ceecc279475063d3465d25f0c5c3e402a70
 persistence:
   internalshare:
     enabled: true

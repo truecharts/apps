@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.15.1
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://ghcr.io/nicholaswilde/fossil
   - https://github.com/truecharts/charts/tree/master/charts/stable/fossil
 type: application
-version: 13.5.0
+version: 13.5.1

@@ -1,7 +1,7 @@
 image:
   pullPolicy: IfNotPresent
   repository: docker.io/afterlogic/docker-aurora-files
-  tag: latest@sha256:3d7fc451334697eb92972c7dd73dc2bfd2718da5a1fb6bfafc4ac278598ecfff
+  tag: latest@sha256:a2e90f9608fbb683dfd719b9a5fafc17d19ddc9b26c23c5dbf92e76b60636615
 persistence: {}
 portal:
   open:

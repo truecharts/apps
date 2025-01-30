@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/linuxserver/piwigo
   pullPolicy: IfNotPresent
-  tag: 15.3.0@sha256:061ac8b69014746b92a2a31a2b3d6774246c7619b604c9d4a40f506f9b9451bd
+  tag: 15.3.0@sha256:873e280417ff74cb84ed4ca743a72e7b35bcdb2292c68d8fb6fdfc99e099b8d9
 securityContext:
   container:
     runAsNonRoot: false

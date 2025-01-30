@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: bitmagnet
-      version: 3.5.0
+      version: 3.6.1
       sourceRef:
         kind: HelmRepository
         name: truecharts

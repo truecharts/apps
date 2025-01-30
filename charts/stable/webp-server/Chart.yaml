@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: latest
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -38,4 +38,4 @@ sources:
   - https://github.com/webp-sh/webp_server_go
   - https://hub.docker.com/r/webpsh/webps
 type: application
-version: 7.5.0
+version: 7.5.1

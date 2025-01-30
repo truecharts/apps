@@ -1,7 +1,7 @@
 image:
   repository: ghcr.io/minekube/gate
   pullPolicy: IfNotPresent
-  tag: latest@sha256:4f02d9f2d7c908c1c56a054c51abbe20125ce1f67a3245ae3785caed60b78fb0
+  tag: latest@sha256:e495c170f09171be87874abef6c5df3f7d899e019ee352efd12fa7019ff30efb
 service:
   main:
     enabled: true

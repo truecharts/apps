@@ -1,0 +1,37 @@
+annotations:
+  max_scale_version: 24.04.1
+  min_scale_version: 24.04.0
+  truecharts.org/category: media
+  truecharts.org/max_helm_version: "3.15"
+  truecharts.org/min_helm_version: "3.11"
+  truecharts.org/train: incubator
+apiVersion: v2
+appVersion: 2.2.0
+dependencies:
+  - name: common
+    version: 25.4.10
+    repository: oci://tccr.io/truecharts
+    condition: ""
+    alias: ""
+    tags: []
+    import-values: []
+deprecated: false
+description: Orca Slicer is an open source slicer for FDM printers.
+home: https://truecharts.org/charts/incubator/orcaslicer
+icon: https://truecharts.org/img/hotlink-ok/chart-icons/orcaslicer.webp
+keywords:
+  - orcaslicer
+  - 3d
+  - printer
+kubeVersion: '>=1.24.0-0'
+maintainers:
+  - name: TrueCharts
+    email: info@truecharts.org
+    url: https://truecharts.org
+name: orcaslicer
+sources:
+  - https://ghcr.io/linuxserver/orcaslicer
+  - https://github.com/SoftFever/OrcaSlicer
+  - https://github.com/truecharts/charts/tree/master/charts/incubator/orcaslicer
+type: application
+version: 0.0.1

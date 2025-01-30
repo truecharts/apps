@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2.1.5
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -31,4 +31,4 @@ sources:
   - https://ghcr.io/linuxserver/ubooquity
   - https://github.com/truecharts/charts/tree/master/charts/stable/ubooquity
 type: application
-version: 12.5.0
+version: 12.5.1

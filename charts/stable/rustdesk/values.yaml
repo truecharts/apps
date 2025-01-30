@@ -1,7 +1,7 @@
 image:
   repository: docker.io/rustdesk/rustdesk-server-s6
   pullPolicy: IfNotPresent
-  tag: 1.1.13@sha256:799a37ea8516365b4aafd8bd6ce7f634578237a0f2c398d348b7602749f9f7d4
+  tag: 1.1.14@sha256:87a7ff1ff5705ced68dd4f5d34d2bbd3f8e67a5583f59c980721f0936afc36da
 workload:
   main:
     podSpec:

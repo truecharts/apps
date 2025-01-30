@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: clusterissuer
-      version: 9.4.1
+      version: 9.5.1
       sourceRef:
         kind: HelmRepository
         name: truecharts

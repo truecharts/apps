@@ -14,7 +14,7 @@ WORKDIR /app
 
 # hadolint ignore=DL3018
 RUN \
-  apk update && apk add --no-cache jq nano ca-certificates bash util-linux coreutils grep procps \
+  apk update && apk add --no-cache jq nano ca-certificates bash util-linux coreutils grep procps git\
   && addgroup apps -g 568 \
   && adduser apps -u 568 -g 568 -D -S -H \
   && mkdir -p /config \

@@ -25,6 +25,7 @@ handbrake:
   AUTOMATED_CONVERSION_FORMAT: "mp4"
   AUTOMATED_CONVERSION_KEEP_SOURCE: true
   AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION: "ignore"
+  DARK_MODE: false
 configmap:
   handbrake:
     enabled: true
@@ -38,6 +39,7 @@ configmap:
       AUTOMATED_CONVERSION_PRESET: "{{ .Values.handbrake.AUTOMATED_CONVERSION_PRESET }}"
       AUTOMATED_CONVERSION_FORMAT: "{{ .Values.handbrake.AUTOMATED_CONVERSION_FORMAT }}"
       AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION: "{{ .Values.handbrake.AUTOMATED_CONVERSION_NON_VIDEO_FILE_ACTION }}"
+      DARK_MODE: '{{ ternary "1" "0" .Values.handbrake.DARK_MODE }}'
 persistence:
   config:
     enabled: true

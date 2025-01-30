@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 3.0.0.621
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/onedr0p/containers/tree/main/apps/whisparr
   - https://github.com/truecharts/charts/tree/master/charts/stable/whisparr
 type: application
-version: 12.5.0
+version: 12.5.1

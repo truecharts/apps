@@ -1,11 +1,11 @@
 image:
   repository: docker.io/fancybits/channels-dvr
   pullPolicy: Always
-  tag: latest@sha256:e1ff3f8f3ed952594048d9e4df5d4da1ba5dd409636a9bd4c3dab1d432f6ec5e
+  tag: latest@sha256:52a8ed8d2071f01dbb30932b8e8d28b2b507289c2fde6f00f43779f657b5ed82
 tveImage:
   repository: docker.io/fancybits/channels-dvr
   pullPolicy: Always
-  tag: tve@sha256:b0b668d078da29bc06ef4deb8662e9104c7bf1af201c06a9a99141c703b5fd1d
+  tag: tve@sha256:ea000df519cc1b25a6b1d80a3b80364060e58a4c44035687fdcc8d4036c75638
 service:
   main:
     ports:

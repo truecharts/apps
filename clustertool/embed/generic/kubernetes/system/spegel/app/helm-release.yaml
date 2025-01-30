@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: spegel
-      version: 2.2.2
+      version: 3.1.1
       sourceRef:
         kind: HelmRepository
         name: truecharts

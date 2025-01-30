@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 5.24.0
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -33,4 +33,4 @@ sources:
   - https://github.com/pmmp/PocketMine-MP
   - https://github.com/truecharts/charts/tree/master/charts/stable/pocketmine-mp
 type: application
-version: 5.12.0
+version: 5.12.1

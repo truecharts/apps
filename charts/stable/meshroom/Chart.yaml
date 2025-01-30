@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 2021.1.0
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -32,4 +32,4 @@ sources:
   - https://github.com/truecharts/charts/tree/master/charts/stable/meshroom
   - https://hub.docker.com/r/alicevision/meshroom
 type: application
-version: 11.5.0
+version: 11.5.1

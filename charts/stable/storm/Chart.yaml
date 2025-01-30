@@ -9,7 +9,7 @@ apiVersion: v2
 appVersion: 1.3.0
 dependencies:
   - name: common
-    version: 25.4.4
+    version: 25.4.10
     repository: oci://tccr.io/truecharts
     condition: ""
     alias: ""
@@ -34,4 +34,4 @@ sources:
   - https://github.com/relvacode/storm/pkgs/container/storm
   - https://github.com/truecharts/charts/tree/master/charts/stable/storm
 type: application
-version: 7.5.0
+version: 7.5.1

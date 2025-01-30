@@ -1,4 +1,4 @@
 image:
   repository: docker.io/aeonlucid/impostor
-  tag: nightly@sha256:6f60b11485b053ab0115bd1d17a8e652bc9e73dbab8242b8c4ebdd4587624fc8
+  tag: nightly@sha256:6c796cbed49fa48fe9109131071b119b58974152176d57787e880424e3eac383
   pullPolicy: IfNotPresent

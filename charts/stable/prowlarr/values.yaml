@@ -1,6 +1,6 @@
 image:
   repository: ghcr.io/onedr0p/prowlarr-develop
-  tag: 1.30.2.4939@sha256:1cf5d5e553719085f4bffd5fab6377e7b72a6ad055a5eeaac951b2a097f3e669
+  tag: 1.30.2.4939@sha256:cf9e51aaabc9c6b745b34af7c5b5280ac62eb07f62b397b6b1834ba4c9862616
   pullPolicy: IfNotPresent
 exportarrImage:
   repository: ghcr.io/onedr0p/exportarr

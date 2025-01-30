@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: kubernetes-reflector
-      version: 6.4.0
+      version: 6.5.1
       sourceRef:
         kind: HelmRepository
         name: truecharts

@@ -1,6 +1,6 @@
 image:
   repository: docker.io/prompve/prometheus-pve-exporter
-  tag: 3.5.0@sha256:c69b2cf7c73bdfb805e8f72593878bcdd42e5222fde6c7fd0c97fc692cda9544
+  tag: 3.5.1@sha256:316de74803dea37472c1c75f4d6b9d4d0187a194653ab36bdc2d3eb3916272d4
 
 service:
   main:

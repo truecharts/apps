@@ -1,0 +1,19 @@
+image:
+  repository: ghcr.io/linuxserver/orcaslicer
+  pullPolicy: IfNotPresent
+  tag: 2.2.0@sha256:ac258b7d70122b9ce3501c70cd047e2a9341d25d3e99ed3e83eec59fd858d542
+securityContext:
+  container:
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
+    runAsUser: 0
+    runAsGroup: 0
+service:
+  main:
+    ports:
+      main:
+        port: 3000
+persistence:
+  config:
+    enabled: true
+    mountPath: /config

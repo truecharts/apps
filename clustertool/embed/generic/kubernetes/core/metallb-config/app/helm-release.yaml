@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: metallb-config
-      version: 8.4.1
+      version: 8.5.1
       sourceRef:
         kind: HelmRepository
         name: truecharts
