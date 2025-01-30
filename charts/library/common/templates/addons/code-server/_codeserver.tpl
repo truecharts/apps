@@ -3,7 +3,7 @@ Template to render code-server addon
 It will include / inject the required templates based on the given values.
 */}}
 {{- define "tc.v1.common.addon.codeserver" -}}
-{{- $targetSelector := "main" -}}
+{{- $targetSelector := list "main" -}}
 {{- if $.Values.addons.codeserver.targetSelector -}}
   {{- $targetSelector = $.Values.addons.codeserver.container.targetSelector -}}
 {{- end -}}
@@ -38,8 +38,12 @@ It will include / inject the required templates based on the given values.
 
 
   {{/* Append the code-server container to the workloads */}}
-    {{- $workload := get $.Values.workload $targetSelector -}}
-    {{- $_ := set $workload.podSpec.containers "codeserver" .Values.addons.codeserver.container -}}
+   {{- range $targetSelector -}}
+
+    {{- $workload := get $.Values.workload . -}}
+    {{- $_ := set $workload.podSpec.containers "codeserver" $.Values.addons.codeserver.container -}}
+   {{- end -}}
+
 
   {{/* Add the code-server ingress */}}
   {{- if .Values.addons.codeserver.ingress.enabled -}}
