@@ -1,34 +1,7 @@
 {{/*
 The gluetun sidecar container to be inserted.
 */}}
-{{- define "tc.v1.common.addon.vpn.gluetun.container" -}}
-enabled: true
-imageSelector: gluetunImage
-probes:
-{{- if $.Values.addons.vpn.livenessProbe }}
-  liveness:
-  {{- toYaml . | nindent 2 }}
-{{- else }}
-  liveness:
-    enabled: false
-{{- end }}
-  readiness:
-    enabled: false
-  startup:
-    enabled: false
-resources:
-  excludeExtra: true
-securityContext:
-  runAsUser: 0
-  runAsNonRoot: false
-  readOnlyRootFilesystem: false
-  runAsGroup: 568
-  capabilities:
-    add:
-      - NET_ADMIN
-      - NET_RAW
-      - MKNOD
-
+{{- define "tc.v1.common.addon.vpn.gluetun.containerModify" -}}
 env:
   DNS_KEEP_NAMESERVER: "on"
   DOT: "off"
@@ -53,22 +26,5 @@ env:
   FIREWALL_INPUT_PORTS: {{ join "," $inputPorts }}
 {{- else }}
   FIREWALL: "off"
-{{- end }}
-
-{{- with $.Values.addons.vpn.env }}
-  {{- . | toYaml | nindent 2 }}
-{{- end -}}
-
-{{- range $envList := $.Values.addons.vpn.envList -}}
-  {{- if and $envList.name $envList.value }}
-  {{ $envList.name }}: {{ $envList.value | quote }}
-  {{- else -}}
-    {{- fail "Please specify name/value for VPN environment variable" -}}
-  {{- end -}}
-{{- end -}}
-
-{{- with $.Values.addons.vpn.args }}
-args:
-  {{- . | toYaml | nindent 2 }}
 {{- end }}
 {{- end -}}

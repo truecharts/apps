@@ -7,11 +7,11 @@ global:
 
 workload:
   main:
-    enabled: false
+    enabled: true
     podSpec:
       containers:
         main:
-          enabled: false
+          enabled: true
 service:
   main:
     enabled: false

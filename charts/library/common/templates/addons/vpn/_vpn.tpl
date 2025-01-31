@@ -5,6 +5,7 @@ It will include / inject the required templates based on the given values.
 {{- define "tc.v1.common.addon.vpn" -}}
 {{- if ne "disabled" .Values.addons.vpn.type -}}
 
+
   {{- if .Values.addons.vpn.config -}}
     {{/* Append the vpn config secret to the secrets */}}
     {{- $secret := include "tc.v1.common.addon.vpn.secret" . | fromYaml -}}
@@ -47,37 +48,38 @@ It will include / inject the required templates based on the given values.
 
   {{/* Ensure target Selector defaults to main pod even if unset */}}
   {{- $targetSelector := list "main" -}}
-  {{- if $.Values.addons.codeserver.targetSelector -}}
-    {{- $targetSelector = $.Values.addons.codeserver.targetSelector -}}
+  {{- if $.Values.addons.vpn.targetSelector -}}
+    {{- $targetSelector = $.Values.addons.vpn.targetSelector -}}
   {{- end -}}
 
   {{/* Append the vpn container to the containers */}}
   {{- range $targetSelector -}}
+    {{- $container := dict -}}
+    {{- $containerModify := dict -}}
     {{- if eq "gluetun" $.Values.addons.vpn.type -}}
-      {{- $container := include "tc.v1.common.addon.vpn.gluetun.container" $ | fromYaml -}}
-      {{- if $container -}}
-        {{- $workload := get $.Values.workload . -}}
-        {{- $_ := set $workload.podSpec.containers "vpn" $container -}}
-      {{- end -}}
+      {{- $container = $.Values.addons.vpn.gluetun.container -}}
+      {{- $containerModify = include "tc.v1.common.addon.vpn.gluetun.containerModify" $ | fromYaml -}}
+
     {{- else if eq "tailscale" $.Values.addons.vpn.type -}}
       {{/* FIXME: https://github.com/tailscale/tailscale/issues/8188 */}}
       {{- $_ := set $.Values.podOptions "automountServiceAccountToken" true -}}
-      {{- $container := include "tc.v1.common.addon.vpn.tailscale.container" $ | fromYaml -}}
-      {{- if $container -}}
-        {{- $workload := get $.Values.workload . -}}
-        {{- $_ := set $workload.podSpec.containers "tailscale" $container -}}
-      {{- end -}}
+      {{- $container = $.Values.addons.vpn.tailscale.container -}}
+      {{- $containerModify = include "tc.v1.common.addon.vpn.tailscale.containerModify" $ | fromYaml -}}
+
     {{- else if eq "openvpn" $.Values.addons.vpn.type -}}
-      {{- $container := include "tc.v1.common.addon.vpn.openvpn.container" $ | fromYaml -}}
-      {{- if $container -}}
-        {{- $workload := get $.Values.workload . -}}
-        {{- $_ := set $workload.podSpec.containers "vpn" $container -}}
-      {{- end -}}
+      {{- $container = $.Values.addons.vpn.openvpn.container -}}
+      {{- $containerModify = include "tc.v1.common.addon.vpn.openvpn.containerModify" $ | fromYaml -}}
+
     {{- else if eq "wireguard" $.Values.addons.vpn.type -}}
-      {{- $container := include "tc.v1.common.addon.vpn.wireguard.container" $ | fromYaml -}}
-      {{- if $container -}}
-        {{- $workload := get $.Values.workload . -}}
-        {{- $_ := set $workload.podSpec.containers "vpn" $container -}}
+      {{- $container = $.Values.addons.vpn.wireguard.container -}}
+      {{- $containerModify = include "tc.v1.common.addon.vpn.wireguard.containerModify" $ | fromYaml -}}
+
+    {{- end -}}
+    {{- if $container.enabled -}}
+   {{- range $targetSelector -}}
+      {{- $mergedContainer := mustMergeOverwrite $container $containerModify -}}
+      {{- $workload := get $.Values.workload . -}}
+      {{- $_ := set $workload.podSpec.containers "vpn" $mergedContainer -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}

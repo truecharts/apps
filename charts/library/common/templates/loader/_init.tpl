@@ -27,6 +27,7 @@
   {{/* Autogenerate solr passwords if needed */}}
   {{- include "tc.v1.common.dependencies.solr.injector" . }}
 
+
   {{/* Enable code-server add-on if required */}}
   {{- if .Values.addons.codeserver.enabled }}
     {{- include "tc.v1.common.addon.codeserver" . }}
@@ -41,6 +42,7 @@
   {{- if .Values.addons.netshoot.enabled }}
     {{- include "tc.v1.common.addon.netshoot" . }}
   {{- end -}}
+
 
   {{/* Append database wait containers to pods */}}
   {{- include "tc.v1.common.lib.deps.wait" $ }}

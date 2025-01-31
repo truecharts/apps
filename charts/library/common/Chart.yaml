@@ -48,4 +48,4 @@ sources:
   - https://hub.docker.com/_/
   - https://hub.docker.com/r/mikefarah/yq
 type: library
-version: 25.4.12
+version: 26.0.0
