@@ -35,6 +35,8 @@ It will include / inject the required templates based on the given values.
     {{- end -}}
     {{- $_ := set .Values.service "codeserver" $serviceValues -}}
   {{- end -}}
+{{- end -}}
+
 
 
   {{/* Append the code-server container to the workloads */}}
