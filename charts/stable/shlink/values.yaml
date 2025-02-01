@@ -1,7 +1,7 @@
 image:
   repository: docker.io/shlinkio/shlink
   pullPolicy: IfNotPresent
-  tag: 4.4.0@sha256:89df56bc72a04809476cf2cbfd94c8fce222da89b57642d0e92b717452646e07
+  tag: 4.4.2@sha256:412eb1585fdb1e3f2006d49fd9ad1dd9cf20b1cc05624914e26c9feeea2a6b99
 service:
   main:
     ports:
